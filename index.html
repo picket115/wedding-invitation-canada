@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>결혼합니다</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Noto+Serif+KR:wght@200;300;400&family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ▶ HERO ─────────────────────────────────────────────── -->
+<header class="hero">
+  <div id="petals"></div>
+  <div class="hero-inner">
+    <p class="hero-eng">We Are Getting Married</p>
+    <div class="hero-line"></div>
+    <h1 class="hero-names" id="heroNames"></h1>
+    <div class="hero-line"></div>
+    <p class="hero-date" id="heroDate"></p>
+  </div>
+  <div class="scroll-hint">SCROLL</div>
+</header>
+
+
+<!-- ▶ INVITATION ─────────────────────────────────────────── -->
+<section class="invitation">
+  <div class="wrap">
+    <div class="ornament fade-up"><div class="ornament-diamond"></div></div>
+    <p class="sec-label fade-up">Invitation</p>
+    <div class="inv-text fade-up" id="invText"></div>
+    <div class="inv-families fade-up" id="invFamilies"></div>
+  </div>
+</section>
+
+
+<!-- ▶ GALLERY ────────────────────────────────────────────── -->
+<section class="gallery">
+  <div class="wrap-lg">
+    <p class="sec-label fade-up">Gallery</p>
+    <h2 class="sec-title fade-up">우리의 순간들</h2>
+    <div class="gallery-grid fade-up" id="galleryGrid"></div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+  <button class="lb-close" id="lbClose" aria-label="닫기">×</button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="이전">‹</button>
+  <img class="lb-img" id="lbImg" src="" alt="" />
+  <button class="lb-nav lb-next" id="lbNext" aria-label="다음">›</button>
+  <p class="lb-count" id="lbCount"></p>
+</div>
+
+
+<!-- ▶ DATE & LOCATION ───────────────────────────────────── -->
+<section class="datetime">
+  <div class="wrap">
+    <p class="sec-label fade-up">Date &amp; Venue</p>
+    <div class="date-big fade-up" id="dateBig"></div>
+    <div class="mini-cal fade-up" id="miniCal"></div>
+    <div class="venue-wrap fade-up" id="venueWrap">
+      <div class="ornament"><div class="ornament-diamond"></div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ▶ ACCOUNTS ───────────────────────────────────────────── -->
+<section class="accounts">
+  <div class="wrap">
+    <p class="sec-label fade-up">마음 전하실 곳</p>
+    <h2 class="sec-title fade-up">축의금 계좌</h2>
+    <div class="acc-cards fade-up" id="accCards"></div>
+  </div>
+</section>
+
+
+<!-- ▶ GUESTBOOK ──────────────────────────────────────────── -->
+<section class="guestbook">
+  <div class="wrap">
+    <p class="sec-label fade-up">Guestbook</p>
+    <h2 class="sec-title fade-up">축하 메시지</h2>
+    <p class="gb-note fade-up">소중한 축하 메시지를 남겨주세요 ♡</p>
+
+    <div class="gb-form fade-up">
+      <div class="gb-row">
+        <div class="gb-field">
+          <label for="gbName">이름 *</label>
+          <input id="gbName" type="text" placeholder="홍길동" maxlength="20" />
+        </div>
+        <div class="gb-field">
+          <label for="gbRel">관계</label>
+          <input id="gbRel" type="text" placeholder="신랑 친구, 신부 직장동료…" maxlength="20" />
+        </div>
+      </div>
+      <div class="gb-field">
+        <label for="gbMsg">메시지 *</label>
+        <textarea id="gbMsg" placeholder="두 분의 결혼을 진심으로 축하드립니다 ✨" maxlength="300"></textarea>
+      </div>
+      <button class="btn-submit" onclick="gbSubmit()">축하 메시지 남기기</button>
+    </div>
+
+    <div class="gb-export-wrap">
+      <button class="btn-export" onclick="gbExport()">메시지 내보내기 (txt)</button>
+    </div>
+    <div class="gb-list" id="gbList"></div>
+  </div>
+</section>
+
+
+<!-- ▶ FOOTER ─────────────────────────────────────────────── -->
+<footer id="footer">
+  <span class="ft-names"></span>
+  결혼합니다
+</footer>
+
+<!-- config.js 를 먼저 로드해야 main.js 에서 CONFIG 를 사용할 수 있습니다 -->
+<script src="config.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

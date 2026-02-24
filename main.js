@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   buildGallery();
   buildDateSection();
   buildAccounts();
-  gbRender();
+  gbInit();
   buildFooter();
   initPetals();
   initScrollAnim();
@@ -240,28 +240,39 @@ function fallbackCopy(text, cb) {
   document.body.removeChild(ta);
 }
 
-/* ── GUESTBOOK ────────────────────────────────────── */
-const GB_KEY = 'wedding_gb_v1';
+/* ── GUESTBOOK (Firebase Firestore) ───────────────── */
+let db         = null;
+let gbMessages = [];
 
-function gbLoad() {
-  try { return JSON.parse(localStorage.getItem(GB_KEY)) || []; }
-  catch (e) { return []; }
-}
+function gbInit() {
+  const cfg = CONFIG.firebaseConfig;
+  if (!cfg || !cfg.apiKey || cfg.apiKey === 'YOUR_API_KEY') {
+    el('gbList').innerHTML =
+      '<div class="gb-empty">config.js 에 Firebase 설정을 입력해주세요.</div>';
+    return;
+  }
 
-function gbSave(msgs) {
-  localStorage.setItem(GB_KEY, JSON.stringify(msgs));
+  firebase.initializeApp(cfg);
+  db = firebase.firestore();
+
+  db.collection('guestbook')
+    .orderBy('ts', 'desc')
+    .onSnapshot(
+      snap => {
+        gbMessages = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+        gbRender();
+      },
+      err => console.error('Firestore 오류:', err)
+    );
 }
 
 function gbRender() {
   const list = el('gbList');
-  const msgs = gbLoad();
-
-  if (!msgs.length) {
+  if (!gbMessages.length) {
     list.innerHTML = '<div class="gb-empty">첫 번째 축하 메시지를 남겨주세요 ♡</div>';
     return;
   }
-
-  list.innerHTML = msgs.map(m => `
+  list.innerHTML = gbMessages.map(m => `
     <div class="gb-msg">
       <div class="gb-hd">
         <div class="gb-hd-left">
@@ -278,43 +289,55 @@ function gbRender() {
 }
 
 function gbFmtDate(ts) {
-  const d = new Date(ts);
+  const d = ts?.toDate ? ts.toDate() : new Date(ts);
   return `${d.getFullYear()}.${String(d.getMonth() + 1).padStart(2, '0')}.${String(d.getDate()).padStart(2, '0')}`;
 }
 
-function gbSubmit() {
+async function gbSubmit() {
   const name = el('gbName').value.trim();
   const rel  = el('gbRel').value.trim();
   const text = el('gbMsg').value.trim();
 
   if (!name) { alert('이름을 입력해주세요.'); el('gbName').focus(); return; }
   if (!text) { alert('메시지를 입력해주세요.'); el('gbMsg').focus(); return; }
+  if (!db)   { alert('Firebase 설정이 필요합니다.'); return; }
 
-  const msgs = gbLoad();
-  msgs.unshift({
-    id:   Date.now().toString(36) + Math.random().toString(36).slice(2),
-    name, rel, text,
-    ts:   Date.now(),
-  });
-  gbSave(msgs);
-  gbRender();
+  const btn = document.querySelector('.btn-submit');
+  btn.disabled    = true;
+  btn.textContent = '저장 중…';
 
-  el('gbName').value = '';
-  el('gbRel').value  = '';
-  el('gbMsg').value  = '';
-  el('gbList').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  try {
+    await db.collection('guestbook').add({
+      name, rel, text,
+      ts: firebase.firestore.FieldValue.serverTimestamp(),
+    });
+    el('gbName').value = '';
+    el('gbRel').value  = '';
+    el('gbMsg').value  = '';
+    el('gbList').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  } catch (e) {
+    alert('저장에 실패했습니다. 잠시 후 다시 시도해주세요.');
+    console.error(e);
+  } finally {
+    btn.disabled    = false;
+    btn.textContent = '축하 메시지 남기기';
+  }
 }
 
-function gbDel(id) {
+async function gbDel(id) {
   if (!confirm('이 메시지를 삭제하시겠습니까?')) return;
-  gbSave(gbLoad().filter(m => m.id !== id));
-  gbRender();
+  if (!db) return;
+  try {
+    await db.collection('guestbook').doc(id).delete();
+  } catch (e) {
+    alert('삭제에 실패했습니다.');
+    console.error(e);
+  }
 }
 
 function gbExport() {
-  const msgs = gbLoad();
-  if (!msgs.length) { alert('저장된 메시지가 없습니다.'); return; }
-  const lines = msgs.map(m =>
+  if (!gbMessages.length) { alert('저장된 메시지가 없습니다.'); return; }
+  const lines = gbMessages.map(m =>
     `[${gbFmtDate(m.ts)}] ${m.name}${m.rel ? ` (${m.rel})` : ''}\n${m.text}\n`);
   const blob = new Blob([lines.join('\n---\n\n')], { type: 'text/plain;charset=utf-8' });
   const a    = document.createElement('a');

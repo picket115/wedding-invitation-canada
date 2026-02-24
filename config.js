@@ -44,4 +44,17 @@ const CONFIG = {
   photos: [
     '', '', '', '', '', '',
   ],
+
+  /* Firebase ✏️
+     Firebase 콘솔(console.firebase.google.com)에서 프로젝트 생성 후
+     프로젝트 설정 > 내 앱 > SDK 설정의 값을 아래에 붙여넣으세요 */
+  firebaseConfig: {
+    apiKey:            'AIzaSyBtwO06KdJm1yaLd4HRdhx--T66iG6XWjo',
+    authDomain:        'wedding-invitation-canada.firebaseapp.com',
+    projectId:         'wedding-invitation-canada',
+    storageBucket:     'wedding-invitation-canada.firebasestorage.app',
+    messagingSenderId: '835221218755',
+    appId:             '1:835221218755:web:e2459085c2d452a8d44976',
+    measurementId:     'G-WRLYXBNWLC',
+  },
 };

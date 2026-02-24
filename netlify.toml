@@ -1,2 +1,10 @@
 [build]
   publish = "."
+
+[[edge_functions]]
+  path = "/templates/classic-cream/"
+  function = "inject-og"
+
+[[edge_functions]]
+  path = "/templates/white-gold/"
+  function = "inject-og"

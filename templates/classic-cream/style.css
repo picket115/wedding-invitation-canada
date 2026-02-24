@@ -70,6 +70,49 @@ section { padding: 80px 1.5rem; }
 }
 .fade-up.visible { opacity: 1; transform: none; }
 
+/* ── ERROR SCREEN ──────────────────────────── */
+.error-screen {
+  min-height: 100svh;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--cream);
+  padding: 2rem;
+}
+.error-inner {
+  text-align: center;
+  max-width: 400px;
+}
+.error-inner::before {
+  content: '♡';
+  display: block;
+  font-size: 2.5rem;
+  color: var(--border);
+  margin-bottom: 1.5rem;
+}
+.error-label {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: var(--text-lt);
+  margin-bottom: .8rem;
+}
+.error-id {
+  font-size: .85rem;
+  color: var(--text-lt);
+  margin-bottom: .6rem;
+}
+.error-id code {
+  background: var(--cream-2);
+  padding: .1em .4em;
+  border-radius: 3px;
+  font-family: monospace;
+  color: var(--gold-dk);
+}
+.error-hint {
+  font-size: .78rem;
+  color: var(--text-lt);
+  line-height: 1.8;
+}
+
 /* ── HERO ────────────────────────────────── */
 .hero {
   position: relative;

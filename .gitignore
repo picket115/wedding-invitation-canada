@@ -1,0 +1,5 @@
+# Firebase 키 (Netlify 환경변수로 관리)
+templates/*/firebase-config.js
+
+# 로컬 환경변수
+.env

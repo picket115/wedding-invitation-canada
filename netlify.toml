@@ -1,5 +1,6 @@
 [build]
   publish = "."
+  command = "node scripts/generate-firebase-config.js"
 
 [[edge_functions]]
   path = "/templates/classic-cream/"

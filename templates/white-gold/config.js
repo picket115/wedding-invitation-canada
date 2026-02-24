@@ -1,17 +1,6 @@
 'use strict';
 
-// =====================================================
-// Firebase 설정 (모든 커플이 공유하는 하나의 프로젝트)
-// =====================================================
-const FIREBASE_CONFIG = {
-  apiKey:            'AIzaSyBtwO06KdJm1yaLd4HRdhx--T66iG6XWjo',
-  authDomain:        'wedding-invitation-canada.firebaseapp.com',
-  projectId:         'wedding-invitation-canada',
-  storageBucket:     'wedding-invitation-canada.firebasestorage.app',
-  messagingSenderId: '835221218755',
-  appId:             '1:835221218755:web:e2459085c2d452a8d44976',
-  measurementId:     'G-WRLYXBNWLC',
-};
+// FIREBASE_CONFIG 는 firebase-config.js 에서 로드됩니다 (Netlify 환경변수 → 빌드 시 자동 생성)
 
 // =====================================================
 // 커플별 설정 맵

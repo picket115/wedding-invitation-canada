@@ -9,3 +9,7 @@
 [[edge_functions]]
   path = "/templates/white-gold/"
   function = "inject-og"
+
+[[edge_functions]]
+  path = "/templates/vintage/"
+  function = "inject-og"

@@ -15,7 +15,7 @@ const content =
 const FIREBASE_CONFIG = ${JSON.stringify(config, null, 2)};
 `;
 
-['classic-cream', 'white-gold'].forEach(t => {
+['classic-cream', 'white-gold', 'vintage'].forEach(t => {
   fs.writeFileSync(`templates/${t}/firebase-config.js`, content);
   console.log(`Generated templates/${t}/firebase-config.js`);
 });

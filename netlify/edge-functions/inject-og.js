@@ -29,6 +29,16 @@ const TEMPLATE_CONFIGS = {
     },
   },
 
+  'vintage': {
+    'default': {
+      groomName: '신랑이름',
+      brideName: '신부이름',
+      year: 2025, month: 11, day: 14,
+      venueName: '그랜드볼룸 웨딩홀',
+      ogImage: '',
+    },
+  },
+
 };
 
 export default async function handler(request, context) {

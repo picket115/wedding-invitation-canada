@@ -6,7 +6,7 @@
   <title>결혼합니다</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Noto+Serif+KR:wght@200;300;400&family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Serif+KR:wght@200;300;400&family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <!-- Open Graph / KakaoTalk 미리보기 -->
   <meta property="og:type"        content="website" />
@@ -17,24 +17,23 @@
 </head>
 <body>
 
-<!-- ▶ HERO ─────────────────────────────────────────────── -->
+<!-- ▶ HERO -->
 <header class="hero">
   <div id="petals"></div>
   <div class="hero-inner">
     <p class="hero-eng">We Are Getting Married</p>
-    <div class="hero-line"></div>
     <h1 class="hero-names" id="heroNames"></h1>
-    <div class="hero-line"></div>
+    <div class="hero-rule"></div>
     <p class="hero-date" id="heroDate"></p>
   </div>
   <div class="scroll-hint">SCROLL</div>
 </header>
 
 
-<!-- ▶ INVITATION ─────────────────────────────────────────── -->
+<!-- ▶ INVITATION -->
 <section class="invitation">
   <div class="wrap">
-    <div class="ornament fade-up"><div class="ornament-diamond"></div></div>
+    <div class="rule fade-up"><div class="rule-dot"></div></div>
     <p class="sec-label fade-up">Invitation</p>
     <div class="inv-text fade-up" id="invText"></div>
     <div class="inv-families fade-up" id="invFamilies"></div>
@@ -42,7 +41,7 @@
 </section>
 
 
-<!-- ▶ SLIDESHOW ───────────────────────────────────────────── -->
+<!-- ▶ SLIDESHOW -->
 <section class="slideshow-section" id="slideshowSection">
   <div class="slideshow-wrap" id="slideshowWrap">
     <div class="slide-track" id="slideTrack"></div>
@@ -53,7 +52,7 @@
 </section>
 
 
-<!-- ▶ DATE & LOCATION ───────────────────────────────────── -->
+<!-- ▶ DATE & LOCATION -->
 <section class="datetime">
   <div class="wrap">
     <p class="sec-label fade-up">Date &amp; Venue</p>
@@ -64,9 +63,10 @@
 </section>
 
 
-<!-- ▶ ACCOUNTS ───────────────────────────────────────────── -->
+<!-- ▶ ACCOUNTS -->
 <section class="accounts">
   <div class="wrap">
+    <div class="rule fade-up"><div class="rule-dot"></div></div>
     <p class="sec-label fade-up">마음 전하실 곳</p>
     <h2 class="sec-title fade-up">축의금 계좌</h2>
     <div class="acc-cards fade-up" id="accCards"></div>
@@ -74,27 +74,22 @@
 </section>
 
 
-<!-- ▶ GUESTBOOK ──────────────────────────────────────────── -->
+<!-- ▶ GUESTBOOK -->
 <section class="guestbook">
   <div class="wrap">
+    <div class="rule fade-up"><div class="rule-dot"></div></div>
     <p class="sec-label fade-up">Guestbook</p>
     <h2 class="sec-title fade-up">축하 메시지</h2>
     <p class="gb-note fade-up">소중한 축하 메시지를 남겨주세요 ♡</p>
 
     <div class="gb-form fade-up">
-      <div class="gb-row">
-        <div class="gb-field">
-          <label for="gbName">이름 *</label>
-          <input id="gbName" type="text" placeholder="홍길동" maxlength="20" />
-        </div>
-        <div class="gb-field">
-          <label for="gbRel">관계</label>
-          <input id="gbRel" type="text" placeholder="신랑 친구, 신부 직장동료…" maxlength="20" />
-        </div>
+      <div class="gb-field">
+        <label for="gbName">이름 *</label>
+        <input id="gbName" type="text" placeholder="홍길동" maxlength="20" />
       </div>
       <div class="gb-field">
         <label for="gbMsg">메시지 *</label>
-        <textarea id="gbMsg" placeholder="두 분의 결혼을 진심으로 축하드립니다 ✨" maxlength="300"></textarea>
+        <textarea id="gbMsg" placeholder="두 분의 결혼을 진심으로 축하드립니다" maxlength="300"></textarea>
       </div>
       <button class="btn-submit" onclick="gbSubmit()">축하 메시지 남기기</button>
     </div>
@@ -107,7 +102,7 @@
 </section>
 
 
-<!-- ▶ FOOTER ─────────────────────────────────────────────── -->
+<!-- ▶ FOOTER -->
 <footer id="footer"></footer>
 
 

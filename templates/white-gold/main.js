@@ -240,7 +240,7 @@ function buildDateSection(CFG) {
   buildMiniCal(CFG);
 
   el('venueWrap').innerHTML = `
-    <div class="ornament"><div class="ornament-diamond"></div></div>
+    <div class="rule"><div class="rule-dot"></div></div>
     <p class="venue-name">${esc(CFG.venueName)}</p>
     <p class="venue-addr">${esc(CFG.venueAddr)}<br>${esc(CFG.venueDetail)}</p>
     <div class="map-box" onclick="openMap('${esc(CFG.mapUrl)}')">
@@ -383,7 +383,6 @@ function gbRender() {
       <div class="gb-hd">
         <div class="gb-hd-left">
           <span class="gb-name">${esc(m.name)}</span>
-          ${m.rel ? `<span class="gb-rel">${esc(m.rel)}</span>` : ''}
         </div>
         <div class="gb-meta">
           <span class="gb-dt">${gbFmtDate(m.ts)}</span>
@@ -401,7 +400,6 @@ function gbFmtDate(ts) {
 
 async function gbSubmit() {
   const name = el('gbName').value.trim();
-  const rel  = el('gbRel').value.trim();
   const text = el('gbMsg').value.trim();
 
   if (!name) { alert('이름을 입력해주세요.'); el('gbName').focus(); return; }
@@ -414,11 +412,10 @@ async function gbSubmit() {
 
   try {
     await gbCol.add({
-      name, rel, text,
+      name, text,
       ts: firebase.firestore.FieldValue.serverTimestamp(),
     });
     el('gbName').value = '';
-    el('gbRel').value  = '';
     el('gbMsg').value  = '';
     el('gbList').scrollIntoView({ behavior: 'smooth', block: 'start' });
   } catch (e) {
@@ -444,7 +441,7 @@ async function gbDel(id) {
 function gbExport() {
   if (!gbMessages.length) { alert('저장된 메시지가 없습니다.'); return; }
   const lines = gbMessages.map(m =>
-    `[${gbFmtDate(m.ts)}] ${m.name}${m.rel ? ` (${m.rel})` : ''}\n${m.text}\n`);
+    `[${gbFmtDate(m.ts)}] ${m.name}\n${m.text}\n`);
   const blob = new Blob([lines.join('\n---\n\n')], { type: 'text/plain;charset=utf-8' });
   const a    = document.createElement('a');
   a.href     = URL.createObjectURL(blob);

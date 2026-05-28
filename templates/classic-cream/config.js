@@ -49,8 +49,8 @@ const CONFIGS = {
        예) './photos/01.jpg'  or  'https://...' */
     photos: [ 
        'images/KakaoTalk_20260528_230250008.jpg',
-   3   'images/KakaoTalk_20260528_230250008_01.jpg',
-   4   'images/KakaoTalk_20260528_230250008_02.jpg'
+       'images/KakaoTalk_20260528_230250008_01.jpg',
+       'images/KakaoTalk_20260528_230250008_02.jpg'
    ],
 
     /* 카카오톡 미리보기 대표 이미지 (선택)

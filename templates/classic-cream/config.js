@@ -11,19 +11,16 @@ const CONFIGS = {
 
   // ── 예시 커플 (테스트용) ─────────────────────────
   'default': {
-    groomName:   '신랑이름',
-    brideName:   '신부이름',
+    groomName:   '최재혁',
+    brideName:   'ellin',
 
     /* 날짜 */
-    year:        2025,
-    month:       11,          // 0-indexed (0=1월 … 11=12월)
-    day:         14,
-    timeLabel:   '오후 1시 30분',
+    year:        2026,
+    month:       07,          // 0-indexed (0=1월 … 11=12월)
+    day:         25,
 
     /* 장소 */
-    venueName:   '그랜드볼룸 웨딩홀',
-    venueAddr:   '서울시 강남구 테헤란로 OOO',
-    venueDetail: '지하철 2호선 OO역 3번 출구 도보 5분',
+    venueAddr:   'Canada Vancouver ...',
     mapUrl:      '#',         // 카카오맵 or 네이버지도 공유 URL
 
     /* 가족 */
@@ -51,7 +48,8 @@ const CONFIGS = {
        'images/KakaoTalk_20260528_230250008.jpg',
        'images/KakaoTalk_20260528_230250008_01.jpg',
        'images/KakaoTalk_20260528_230250008_02.jpg'
-   ],
+    ],
+
 
     /* 카카오톡 미리보기 대표 이미지 (선택)
        없으면 photos 첫 번째 사진이 자동 사용됩니다 */

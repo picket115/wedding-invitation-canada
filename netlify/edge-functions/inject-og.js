@@ -11,11 +11,11 @@ const TEMPLATE_CONFIGS = {
 
   'classic-cream': {
     'default': {
-      groomName: '신랑이름',
-      brideName: '신부이름',
-      year: 2025, month: 11, day: 14,
-      venueName: '그랜드볼룸 웨딩홀',
-      ogImage: '',   // 절대 URL 입력 시 카카오 이미지 미리보기 표시
+      groomName: '최재혁',
+      brideName: 'ellin',
+      year: 2026, month: 7, day: 25,
+      venueName: '캐나다 벤쿠버',
+      ogImage: 'https://https://canada-wedding.netlify.app/templates/classic-cream/images/KakaoTalk_20260528_230250008.jpg',   // 절대 URL 입력 시 카카오 이미지 미리보기 표시
     },
   },
 

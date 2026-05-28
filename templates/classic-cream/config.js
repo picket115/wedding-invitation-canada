@@ -27,8 +27,8 @@ const CONFIGS = {
     mapUrl:      '#',         // 카카오맵 or 네이버지도 공유 URL
 
     /* 가족 */
-    groomFather: '아버지이름',
-    groomMother: '어머니이름',
+    groomFather: '최우호',
+    groomMother: '서정주',
     brideFather: '아버지이름',
     brideMother: '어머니이름',
 
@@ -47,7 +47,11 @@ const CONFIGS = {
 
     /* 사진 (빈 문자열은 플레이스홀더로 표시)
        예) './photos/01.jpg'  or  'https://...' */
-    photos: ['', '', '', '', '', ''],
+    photos: [ 
+       'images/KakaoTalk_20260528_230250008.jpg',
+   3   'images/KakaoTalk_20260528_230250008_01.jpg',
+   4   'images/KakaoTalk_20260528_230250008_02.jpg'
+   ],
 
     /* 카카오톡 미리보기 대표 이미지 (선택)
        없으면 photos 첫 번째 사진이 자동 사용됩니다 */

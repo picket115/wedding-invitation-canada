@@ -51,6 +51,12 @@ export default async function handler(request, context) {
   const response = await context.next();
   if (response.status !== 200) return response;
 
+  // HTML 응답인 경우에만 OG 태그 주입 진행
+  const contentType = response.headers.get('content-type') || '';
+  if (!contentType.includes('text/html')) {
+    return response;
+  }
+
   const cfg = TEMPLATE_CONFIGS[tplName]?.[id];
   if (!cfg) return response;
 
@@ -79,5 +85,5 @@ export default async function handler(request, context) {
 }
 
 export const config = {
-  path: ['/templates/classic-cream/', '/templates/white-gold/'],
+  path: '/templates/*',
 };

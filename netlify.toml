@@ -3,13 +3,9 @@
   command = "node scripts/generate-firebase-config.js"
 
 [[edge_functions]]
-  path = "/templates/classic-cream/"
-  function = "inject-og"
+  path = "/*"
+  function = "redirect-root"
 
 [[edge_functions]]
-  path = "/templates/white-gold/"
-  function = "inject-og"
-
-[[edge_functions]]
-  path = "/templates/vintage/"
+  path = "/templates/*"
   function = "inject-og"

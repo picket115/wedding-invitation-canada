@@ -16,7 +16,7 @@ const CONFIGS = {
 
     /* 날짜 */
     year:        2026,
-    month:       07,          // 0-indexed (0=1월 … 11=12월)
+    month:       7,          // 0-indexed (0=1월 … 11=12월)
     day:         25,
 
     /* 장소 */

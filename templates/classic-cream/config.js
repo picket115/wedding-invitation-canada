@@ -20,7 +20,7 @@ const CONFIGS = {
     day:         25,
 
     /* 장소 */
-    venueName:   'Vancouver, BC',
+    venueName:   'Vancouver,',
     venueAddr:   'Canada',
     venueDetail: '밴쿠버 시내 전역',
     mapUrl:      'https://www.google.com/maps/place/Vancouver,+BC,+Canada/@49.2577062,-123.1939529,12z/',

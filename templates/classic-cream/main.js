@@ -191,9 +191,13 @@ function buildDateSection(CFG) {
 
   el('venueWrap').innerHTML = `
     <div class="ornament"><div class="ornament-diamond"></div></div>
-    <p class="venue-addr">${esc(CFG.venueAddr)}</p>
-    <div class="map-box" onclick="openMap('${esc(CFG.mapUrl)}')">
-      📍 &nbsp;지도 클릭으로 이동
+    <p class="venue-addr">${esc(CFG.venueName)} ${esc(CF)CFG.venueAddr)}</p>
+    <div class="map-box">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d166655.3082737667!2d-123.1335975!3d49.2577062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548673f143a94803%3A0xbb1a9a424097402!2sVancouver%2C%20BC%2C%20Canada!5e0!3m2!1sen!2sca!4v1716940000000!5m2!1sen!2sca" 
+        width="100%" height="100%" style="border:0; border-radius: 6px;" 
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </div>
     <a class="btn-outline" href="${esc(CFG.mapUrl)}" target="_blank" rel="noopener">
       🗺 &nbsp;지도 앱으로 보기
@@ -265,6 +269,7 @@ function buildAccounts(CFG) {
 }
 
 function copyNum(num, btn) {
+  const cleanNum = num.replace(/-/g, ''); // 하이픈 제거
   const orig = btn.innerHTML;
   const done = () => {
     btn.innerHTML = '✓ &nbsp;복사 완료!';
@@ -272,9 +277,9 @@ function copyNum(num, btn) {
     setTimeout(() => { btn.innerHTML = orig; btn.classList.remove('ok'); }, 2200);
   };
   if (navigator.clipboard) {
-    navigator.clipboard.writeText(num).then(done).catch(() => fallbackCopy(num, done));
+    navigator.clipboard.writeText(cleanNum).then(done).catch(() => fallbackCopy(cleanNum, done));
   } else {
-    fallbackCopy(num, done);
+    fallbackCopy(cleanNum, done);
   }
 }
 

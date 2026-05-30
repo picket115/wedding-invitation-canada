@@ -247,7 +247,7 @@ function buildMiniCal(CFG) {
 
 /* ── ACCOUNTS ───────────────────────────────────────── */
 function buildAccounts(CFG) {
-  const allAcc = [...CFG.accounts];
+  const allAcc = [...(CFG.groomAccounts || []), ...(CFG.brideAccounts || [])];
   const rows = allAcc.map(a => `
     <div class="acc-row">
       <div class="acc-bank">${esc(a.bank)}</div>

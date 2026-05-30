@@ -12,7 +12,7 @@ const TEMPLATE_CONFIGS = {
   'classic-cream': {
     'default': {
       groomName: '최재혁',
-      brideName: 'ellin',
+      brideName: 'Erin Christine Mary Hunt',
       year: 2026, month: 7, day: 25,
       venueName: '캐나다 벤쿠버',
       ogImage: 'https://canada-wedding.netlify.app/templates/classic-cream/images/KakaoTalk_20260528_230250008.jpg',

@@ -12,7 +12,7 @@ const CONFIGS = {
   // ── 예시 커플 (테스트용) ─────────────────────────
   'default': {
     groomName:   '최재혁',
-    brideName:   'ellin',
+    brideName:   'Erin Christine Mary Hunt',
 
     /* 날짜 */
     year:        2026,
@@ -21,7 +21,7 @@ const CONFIGS = {
 
     /* 장소 */
     venueAddr:   'Canada Vancouver ...',
-    mapUrl:      '#',         // 카카오맵 or 네이버지도 공유 URL
+    //mapUrl:      '#',         // 카카오맵 or 네이버지도 공유 UR
 
     /* 가족 */
     groomFather: '최우호',
@@ -30,17 +30,13 @@ const CONFIGS = {
     brideMother: '어머니이름',
 
     /* 초대글 */
-    inviteText: `저희 두 사람이 사랑을 맺어\n한 가정을 이루려 합니다.\n\n소중한 분들을 모시고\n기쁨을 함께 나누고자 합니다.\n\n바쁘신 중에도 부디 오셔서\n자리를 빛내 주시면 감사하겠습니다.`,
+    inviteText: `저희 두 사람이 먼 해외에서 \n소중한 결혼식을 올리게 되었습니다.\n 직접 모시고 축하를 나누지 못해 정말 죄송한 마음입니다.\n 비록 몸은 멀리 떨어져 있지만,\n 보내주시는 따뜻한 축복을 마음 깊이 새기며 예쁘게 잘 살겠습니다.`,
 
     /* 축의금 계좌 */
     groomAccounts: [
-      { bank: 'OO은행', number: '123-456-789012', holder: '신랑아버지' },
-      { bank: 'OO은행', number: '123-456-789012', holder: '신랑이름'   },
+      { bank: '신한은행', number: '110-123-456789', holder: '최재혁' },
     ],
-    brideAccounts: [
-      { bank: 'OO은행', number: '123-456-789012', holder: '신부어머니' },
-      { bank: 'OO은행', number: '123-456-789012', holder: '신부이름'   },
-    ],
+    brideAccounts: [],
 
     /* 사진 (빈 문자열은 플레이스홀더로 표시)
        예) './photos/01.jpg'  or  'https://...' */

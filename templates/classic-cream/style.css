@@ -360,8 +360,12 @@ section { padding: 80px 1.5rem; }
   color: var(--text-lt); padding: .3rem 0;
 }
 .mc-d {
-  font-size: .78rem; text-align: center;
-  padding: .38rem 0; border-radius: 50%;
+  font-size: .78rem; 
+  display: flex; align-items: center; justify-content: center;
+  aspect-ratio: 1/1;
+  width: 1.8rem;
+  margin: 0 auto;
+  border-radius: 50%;
   color: var(--text-lt);
 }
 .mc-d.sun { color: #c07070; }

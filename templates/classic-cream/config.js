@@ -20,8 +20,10 @@ const CONFIGS = {
     day:         25,
 
     /* 장소 */
-    venueAddr:   'Canada Vancouver ...',
-    //mapUrl:      '#',         // 카카오맵 or 네이버지도 공유 UR
+    venueName:   'Vancouver, BC',
+    venueAddr:   'Canada',
+    venueDetail: '밴쿠버 시내 전역',
+    mapUrl:      'https://www.google.com/maps/place/Vancouver,+BC,+Canada/@49.2577062,-123.1939529,12z/',
 
     /* 가족 */
     groomFather: '최우호',
@@ -33,13 +35,10 @@ const CONFIGS = {
     inviteText: `저희 두 사람이 먼 해외에서 \n소중한 결혼식을 올리게 되었습니다.\n 직접 모시고 축하를 나누지 못해 정말 죄송한 마음입니다.\n 비록 몸은 멀리 떨어져 있지만,\n 보내주시는 따뜻한 축복을 마음 깊이 새기며 예쁘게 잘 살겠습니다.`,
 
     /* 축의금 계좌 */
-    ccounts: [
-      { bank: 'OO은행', number: '123-456-789012', holder: '신랑측' },
+    groomAccounts: [
+      { bank: '신한은행', number: '110-123-456789', holder: '최재혁' },
     ],
-    //brideAccounts: [
-    //  { bank: 'OO은행', number: '123-456-789012', holder: '신부어머니' },
-    //  { bank: 'OO은행', number: '123-456-789012', holder: '신부이름'   },
-    //],
+    brideAccounts: [],
 
     /* 사진 (빈 문자열은 플레이스홀더로 표시)
        예) './photos/01.jpg'  or  'https://...' */

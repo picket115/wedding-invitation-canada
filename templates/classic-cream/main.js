@@ -191,7 +191,7 @@ function buildDateSection(CFG) {
 
   el('venueWrap').innerHTML = `
     <div class="ornament"><div class="ornament-diamond"></div></div>
-    <p class="venue-addr">${esc(CFG.venueName)} ${esc(CF)CFG.venueAddr)}</p>
+    <p class="venue-addr">${esc(CFG.venueName)} ${esc(CFG.venueAddr)}</p>
     <div class="map-box">
       <iframe 
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d166655.3082737667!2d-123.1335975!3d49.2577062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548673f143a94803%3A0xbb1a9a424097402!2sVancouver%2C%20BC%2C%20Canada!5e0!3m2!1sen!2sca!4v1716940000000!5m2!1sen!2sca" 

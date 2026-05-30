@@ -191,8 +191,7 @@ function buildDateSection(CFG) {
 
   el('venueWrap').innerHTML = `
     <div class="ornament"><div class="ornament-diamond"></div></div>
-    <p class="venue-name">${esc(CFG.venueName)}</p>
-    <p class="venue-addr">${esc(CFG.venueAddr)}<br>${esc(CFG.venueDetail)}</p>
+    <p class="venue-addr">${esc(CFG.venueAddr)}</p>
     <div class="map-box" onclick="openMap('${esc(CFG.mapUrl)}')">
       📍 &nbsp;지도 클릭으로 이동
     </div>
@@ -245,7 +244,7 @@ function buildMiniCal(CFG) {
 
 /* ── ACCOUNTS ───────────────────────────────────────── */
 function buildAccounts(CFG) {
-  const allAcc = [...CFG.groomAccounts, ...CFG.brideAccounts];
+  const allAcc = [...CFG.accounts];
   const rows = allAcc.map(a => `
     <div class="acc-row">
       <div class="acc-bank">${esc(a.bank)}</div>

@@ -245,30 +245,24 @@ function buildMiniCal(CFG) {
 
 /* ── ACCOUNTS ───────────────────────────────────────── */
 function buildAccounts(CFG) {
-  function makeCard(title, side, accounts, isGroom) {
-    const rows = accounts.map(a => `
-      <div class="acc-row">
-        <div class="acc-bank">${esc(a.bank)}</div>
-        <div class="acc-num">${esc(a.number)}</div>
-        <div class="acc-name">예금주: ${esc(a.holder)}</div>
-        <button class="btn-copy" onclick="copyNum('${esc(a.number)}', this)">
-          📋 &nbsp;계좌번호 복사
-        </button>
-      </div>`).join('');
+  const allAcc = [...CFG.groomAccounts, ...CFG.brideAccounts];
+  const rows = allAcc.map(a => `
+    <div class="acc-row">
+      <div class="acc-bank">${esc(a.bank)}</div>
+      <div class="acc-num">${esc(a.number)}</div>
+      <div class="acc-name">예금주: ${esc(a.holder)}</div>
+      <button class="btn-copy" onclick="copyNum('${esc(a.number)}', this)">
+        📋 &nbsp;계좌번호 복사
+      </button>
+    </div>`).join('');
 
-    return `
-      <div class="acc-card">
-        <div class="acc-head ${isGroom ? '' : 'bride'}">
-          <div class="side">${esc(side)}</div>
-          <div class="who">${esc(title)}</div>
-        </div>
-        <div class="acc-body">${rows}</div>
-      </div>`;
-  }
-
-  el('accCards').innerHTML =
-    makeCard(CFG.groomName + ' 측', '신랑 측', CFG.groomAccounts, true) +
-    makeCard(CFG.brideName + ' 측', '신부 측', CFG.brideAccounts, false);
+  el('accCards').innerHTML = `
+    <div class="acc-card unified">
+      <div class="acc-head">
+        <div class="side">마음 전하실 곳</div>
+      </div>
+      <div class="acc-body">${rows}</div>
+    </div>`;
 }
 
 function copyNum(num, btn) {

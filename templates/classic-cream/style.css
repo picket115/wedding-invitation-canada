@@ -406,9 +406,13 @@ section { padding: 80px 1.5rem; }
 .accounts { background: var(--cream-2); }
 
 .acc-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: center;
   gap: 1.4rem;
+}
+.acc-card.unified {
+  width: 100%;
+  max-width: 450px;
 }
 .acc-card {
   background: var(--white);

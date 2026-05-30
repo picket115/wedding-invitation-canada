@@ -218,13 +218,12 @@ section { padding: 80px 1.5rem; }
 
 .inv-families {
   display: flex;
-  justify-content: center;
-  gap: 2.5rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
   margin-top: 2.8rem;
-  flex-wrap: wrap;
 }
-.fam-sep { width: 1px; background: var(--border); align-self: stretch; }
-.fam-block { text-align: center; }
+.fam-block { text-align: center; width: 100%; }
 .fam-rel {
   font-size: .78rem;
   color: var(--text-lt);

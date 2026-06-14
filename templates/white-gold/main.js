@@ -1,4 +1,6 @@
 'use strict';
+// Version: 1.0.1 - Fixed end of file corruption
+
 
 /* ── 상수 ──────────────────────────────────────────── */
 const DOW_KO = ['일','월','화','수','목','금','토'];
@@ -493,12 +495,16 @@ function initPetals() {
   }
 }
 
-/* ── SCROLL ANIMATIONS ──────────────────────────────── */
+/* -- SCROLL ANIMATIONS -------------------------------- */
 function initScrollAnim() {
   const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: .1 });
-  document.querySelectorAll('.fade-up').forEach(node => obs.observe(node));
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(node => {
+    obs.observe(node);
+  });
 }
-ade-up').forEach(node => obs.observe(node));
-}
+
+

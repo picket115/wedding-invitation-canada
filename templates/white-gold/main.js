@@ -234,7 +234,6 @@ function buildDateSection(CFG) {
   el('dateBig').innerHTML = `
     <div class="yr">${CFG.year}</div>
     <div class="md">${mm}<span>/</span>${dd}</div>
-    <div class="dow">${CFG.year}년 ${MON_KO[CFG.month]} ${CFG.day}일 ${DOW_KO[d.getDay()]}요일</div>
     <div class="time">${esc(CFG.timeLabel)}</div>`;
 
   buildMiniCal(CFG);

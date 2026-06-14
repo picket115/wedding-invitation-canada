@@ -22,8 +22,8 @@ const CONFIGS = {
     /* 장소 */
     venueName:   'Kedron Dells Golf Club',
     venueAddr:   '2400 Ritson Rd N, Oshawa, ON L1H 0N8',
-    venueDetail: 'Oshawa, Canada',
-    mapUrl:      'https://www.google.com/maps/place/Kedron+Dells+Golf+Club/@43.9624212,-78.8838653,17z/',
+    venueDetail: '2400 Ritson Rd N, Oshawa, ON L1H 0N8',
+    mapUrl:      'https://www.google.com/maps/search/?api=1&query=Kedron+Dells+Golf+Club',
     mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2871.444444444444!2d-78.8888888!3d43.9666667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d51b9999999999%3A0x1234567890abcdef!2sKedron%20Dells%20Golf%20Club!5e0!3m2!1sen!2sca!4v1718345678901!5m2!1sen!2sca',
 
     /* 가족 */

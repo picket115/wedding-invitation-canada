@@ -470,7 +470,9 @@ function gbExport() {
 
 /* ── FOOTER ─────────────────────────────────────────── */
 function buildFooter(CFG) {
-  el('footer').innerHTML = `
+  const footer = el('footer');
+  if (!footer) return;
+  footer.innerHTML = `
     <span class="ft-names">${CFG.groomName.replace(/<br>/g, ' ')} ♡ ${CFG.brideName.replace(/<br>/g, ' ')}</span>
     결혼합니다
     <span style="display:block;margin-top:.3rem;">

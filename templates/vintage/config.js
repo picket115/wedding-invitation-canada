@@ -45,9 +45,9 @@ const CONFIGS = {
 
     /* 사진 */
     photos: [ 
-       'images/KakaoTalk_20260528_230250008.jpg',
-       'images/KakaoTalk_20260528_230250008_01.jpg',
-       'images/KakaoTalk_20260528_230250008_02.jpg'
+       '/templates/classic-cream/images/KakaoTalk_20260528_230250008.jpg',
+       '/templates/classic-cream/images/KakaoTalk_20260528_230250008_01.jpg',
+       '/templates/classic-cream/images/KakaoTalk_20260528_230250008_02.jpg'
     ],
   },
 

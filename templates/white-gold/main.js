@@ -242,10 +242,15 @@ function buildDateSection(CFG) {
   el('venueWrap').innerHTML = `
     <div class="rule"><div class="rule-dot"></div></div>
     <p class="venue-name">${esc(CFG.venueName)}</p>
-    <p class="venue-addr">${esc(CFG.venueAddr)}<br>${esc(CFG.venueDetail)}</p>
-    <div class="map-box" onclick="openMap('${esc(CFG.mapUrl)}')">
-      📍 &nbsp;지도 클릭으로 이동
-    </div>
+    <a href="${esc(CFG.mapUrl)}" target="_blank" rel="noopener" style="display: block; text-decoration: none;">
+      <div class="map-box">
+        <iframe 
+          src="${CFG.mapEmbedUrl || 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d166655.3082737667!2d-123.1335975!3d49.2577062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548673f143a94803%3A0xbb1a9a424097402!2sVancouver%2C%20BC%2C%20Canada!5e0!3m2!1sen!2sca!4v1716940000000!5m2!1sen!2sca'}" 
+          width="100%" height="100%" style="border:0; border-radius: 6px; pointer-events: none;" 
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </a>
     <a class="btn-outline" href="${esc(CFG.mapUrl)}" target="_blank" rel="noopener">
       🗺 &nbsp;지도 앱으로 보기
     </a>`;

@@ -18,7 +18,6 @@ const CONFIGS = {
     year:        2026,
     month:       6,          // 0-indexed (0=1월 … 11=12월)
     day:         25,
-    timeLabel:   '오후 1시 30분',
 
     /* 장소 */
     venueName:   'Kedron Dells Golf Club',

@@ -235,8 +235,7 @@ function buildDateSection(CFG) {
 
   el('dateBig').innerHTML = `
     <div class="yr">${CFG.year}</div>
-    <div class="md">${mm}<span>/</span>${dd}</div>
-    <div class="time">${esc(CFG.timeLabel)}</div>`;
+    <div class="md">${mm}<span>/</span>${dd}</div>`;
 
   buildMiniCal(CFG);
 

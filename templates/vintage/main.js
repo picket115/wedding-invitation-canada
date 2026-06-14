@@ -250,6 +250,14 @@ function buildMiniCal(CFG) {
 
 /* ── ACCOUNTS ───────────────────────────────────────── */
 function buildAccounts(CFG) {
+  const gAcc = CFG.groomAccounts || [];
+  const bAcc = CFG.brideAccounts || [];
+
+  if (gAcc.length === 0 && bAcc.length === 0) {
+    document.querySelector('.accounts').style.display = 'none';
+    return;
+  }
+
   function makeCard(title, side, accounts, isGroom) {
     const rows = accounts.map(a => `
       <div class="acc-row">

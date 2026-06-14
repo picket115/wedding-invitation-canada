@@ -250,11 +250,16 @@ function buildMiniCal(CFG) {
 
 /* ── ACCOUNTS ───────────────────────────────────────── */
 function buildAccounts(CFG) {
+  const accSection = document.querySelector('.accounts');
+  const accCards = el('accCards');
+
+  if (!accSection || !accCards) return;
+
   const gAcc = CFG.groomAccounts || [];
   const bAcc = CFG.brideAccounts || [];
 
   if (gAcc.length === 0 && bAcc.length === 0) {
-    document.querySelector('.accounts').style.display = 'none';
+    accSection.style.display = 'none';
     return;
   }
 

@@ -469,7 +469,7 @@ function gbExport() {
 /* ── FOOTER ─────────────────────────────────────────── */
 function buildFooter(CFG) {
   el('footer').innerHTML = `
-    <span class="ft-names">${CFG.groomName} <br> <span style="font-size: 0.6em;">♡</span> <br> ${CFG.brideName}</span>
+    <span class="ft-names">${CFG.groomName.replace(/<br>/g, ' ')} ♡ ${CFG.brideName.replace(/<br>/g, ' ')}</span>
     결혼합니다
     <span style="display:block;margin-top:.3rem;">
       ${CFG.year}.${String(CFG.month + 1).padStart(2, '0')}.${String(CFG.day).padStart(2, '0')}
@@ -499,4 +499,6 @@ function initScrollAnim() {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: .1 });
   document.querySelectorAll('.fade-up').forEach(node => obs.observe(node));
+}
+ade-up').forEach(node => obs.observe(node));
 }

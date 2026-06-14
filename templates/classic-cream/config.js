@@ -20,10 +20,11 @@ const CONFIGS = {
     day:         25,
 
     /* 장소 */
-    venueName:   'Vancouver,',
-    venueAddr:   'Canada',
-    venueDetail: '밴쿠버 시내 전역',
-    mapUrl:      'https://www.google.com/maps/place/Vancouver,+BC,+Canada/@49.2577062,-123.1939529,12z/',
+    venueName:   'Kedron Dells Golf Club',
+    venueAddr:   '2400 Ritson Rd N, Oshawa, ON L1H 0N8',
+    venueDetail: 'Oshawa, Canada',
+    mapUrl:      'https://www.google.com/maps/place/Kedron+Dells+Golf+Club/@43.9624212,-78.8838653,17z/',
+    mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2871.444444444444!2d-78.8888888!3d43.9666667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d51b9999999999%3A0x1234567890abcdef!2sKedron%20Dells%20Golf%20Club!5e0!3m2!1sen!2sca!4v1718345678901!5m2!1sen!2sca',
 
     /* 가족 */
     groomFather: '최우호',
@@ -35,8 +36,9 @@ const CONFIGS = {
     inviteText: `저희 두 사람이 먼 해외에서 \n소중한 결혼식을 올리게 되었습니다.\n 직접 모시고 축하를 나누지 못해 정말 아쉬운 마음입니다.\n 비록 몸은 멀리 떨어져 있지만,\n 보내주시는 따뜻한 축복을 마음 깊이 새기며 \n 예쁘게 잘 살겠습니다.`,
 
     /* 축의금 계좌 */
-    accounts: [
-      { bank: '신한은행', number: '110-123-456789', holder: '최재혁' },
+    groomAccounts: [
+      { bank: '대구은행', number: '508-11-670692-2', holder: '서정주' },
+      { bank: '농협은행', number: '150076-52-090767', holder: '최우호' },
     ],
 
     /* 사진 (빈 문자열은 플레이스홀더로 표시)

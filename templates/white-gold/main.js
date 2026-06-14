@@ -108,12 +108,12 @@ function buildInvitation(CFG) {
   el('invFamilies').innerHTML = `
     <div class="fam-block">
       <p class="fam-rel">${esc(CFG.groomFather)} · ${esc(CFG.groomMother)}의 아들</p>
-      <p class="fam-person">${esc(CFG.groomName)}</p>
+      <p class="fam-person">${CFG.groomName}</p>
     </div>
     <div class="fam-sep"></div>
     <div class="fam-block">
       <p class="fam-rel">${esc(CFG.brideFather)} · ${esc(CFG.brideMother)}의 딸</p>
-      <p class="fam-person">${esc(CFG.brideName)}</p>
+      <p class="fam-person">${CFG.brideName}</p>
     </div>`;
 }
 

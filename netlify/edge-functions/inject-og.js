@@ -26,7 +26,7 @@ const TEMPLATE_CONFIGS = {
       brideName: 'Erin Christine Mary Hunt',
       year: 2026, month: 6, day: 25,
       venueName: 'Kedron Dells Golf Club',
-      ogImage: 'https://canada-wedding.netlify.app/templates/classic-cream/images/KakaoTalk_20260528_230250008.jpg',
+      ogImage: 'https://canada-wedding.netlify.app/templates/classic-cream/images/KakaoTalk_20260528_230250008_01.jpg',
     },
   },
 

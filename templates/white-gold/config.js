@@ -47,6 +47,8 @@ const CONFIGS = {
        '/templates/classic-cream/images/KakaoTalk_20260528_230250008_01.jpg',
        '/templates/classic-cream/images/KakaoTalk_20260528_230250008_02.jpg'
     ],
+    /* 카카오톡 미리보기 대표 이미지 (선택) */
+    ogImage: '/templates/classic-cream/images/KakaoTalk_20260528_230250008_01.jpg',
   },
 
 };

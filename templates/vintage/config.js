@@ -37,10 +37,7 @@ const CONFIGS = {
     inviteText: `저희 두 사람이 먼 해외에서 \n소중한 결혼식을 올리게 되었습니다.\n 직접 모시고 축하를 나누지 못해 정말 아쉬운 마음입니다.\n 비록 몸은 멀리 떨어져 있지만,\n 보내주시는 따뜻한 축복을 마음 깊이 새기며 \n 예쁘게 잘 살겠습니다.`,
 
     /* 축의금 계좌 */
-    groomAccounts: [
-      { bank: '대구은행', number: '508-11-670692-2', holder: '서정주' },
-      { bank: '농협은행', number: '150076-52-090767', holder: '최우호' },
-    ],
+    groomAccounts: [],
     brideAccounts: [],
 
     /* 사진 */

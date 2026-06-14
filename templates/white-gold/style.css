@@ -147,20 +147,21 @@ section { padding: 100px 1.5rem; }
 
 .hero-names {
   font-family: 'Noto Serif KR', serif;
-  font-size: clamp(2rem, 8vw, 4rem);
+  font-size: clamp(2rem, 8vw, 3.2rem);
   font-weight: 200;
   color: var(--text);
-  line-height: 1.1;
+  line-height: 1.3;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 1.2rem;
-  white-space: nowrap;
+  gap: 0.8rem;
 }
 .name-sep {
-  width: 1px;
-  height: 1.2em;
-  background: linear-gradient(to bottom, transparent, var(--gold-lt), transparent);
+  width: 30px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold-lt), transparent);
   flex-shrink: 0;
+  margin: 0.5rem 0;
 }
 
 .hero-rule {

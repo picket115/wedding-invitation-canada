@@ -12,7 +12,7 @@ const CONFIGS = {
   // ── 예시 커플 (테스트용) ─────────────────────────
   'default': {
     groomName:   '최재혁',
-    brideName:   'Erin Christine Mary Hunt',
+    brideName:   'Erin Christine<br>Mary Hunt',
 
     /* 날짜 */
     year:        2026,

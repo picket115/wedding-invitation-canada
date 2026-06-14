@@ -469,7 +469,7 @@ function gbExport() {
 /* ── FOOTER ─────────────────────────────────────────── */
 function buildFooter(CFG) {
   el('footer').innerHTML = `
-    <span class="ft-names">${esc(CFG.groomName)}  ♡  ${esc(CFG.brideName)}</span>
+    <span class="ft-names">${CFG.groomName}  ♡  ${CFG.brideName}</span>
     결혼합니다
     <span style="display:block;margin-top:.3rem;">
       ${CFG.year}.${String(CFG.month + 1).padStart(2, '0')}.${String(CFG.day).padStart(2, '0')}

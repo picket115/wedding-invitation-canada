@@ -91,9 +91,9 @@ function buildHero(CFG) {
   const d = new Date(CFG.year, CFG.month, CFG.day);
 
   el('heroNames').innerHTML =
-    `<span class="groom">${esc(CFG.groomName)}</span>
+    `<span class="groom">${CFG.groomName}</span>
      <span class="name-sep" aria-hidden="true"></span>
-     <span class="bride">${esc(CFG.brideName)}</span>`;
+     <span class="bride">${CFG.brideName}</span>`;
 
   el('heroDate').textContent =
     `${CFG.year}년 ${MON_KO[CFG.month]} ${CFG.day}일 ${DOW_KO[d.getDay()]}요일`;

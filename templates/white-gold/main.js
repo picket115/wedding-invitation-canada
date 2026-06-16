@@ -309,7 +309,6 @@ function buildAccounts(CFG) {
   const bAcc = CFG.brideAccounts || [];
 
   if (gAcc.length === 0 && bAcc.length === 0) {
-    accSection.style.display = 'none';
     return;
   }
 
